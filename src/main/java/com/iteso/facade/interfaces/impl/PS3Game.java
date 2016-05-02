@@ -15,17 +15,17 @@ public class PS3Game implements VideoGame {
         this.name = name;
     }
 
-    @Override
+
     public void setOnlineMode() {
         System.out.println("Setting Online mode on " + name);
     }
 
-    @Override
+
     public void play() {
         System.out.println("Playing " + name);
     }
 
-    @Override
+
     public String getName() {
         return this.name;
     }
