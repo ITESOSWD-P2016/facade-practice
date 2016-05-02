@@ -11,31 +11,29 @@ import com.iteso.facade.interfaces.impl.PS3Game;
  * Time: 8:17 PM
  * To change this template use File | Settings | File Templates.
  */
-public class VideoGameFacade {
+public class MovieFacade {
     TV tv;
     GameConsole console;
     GameController controller;
     SoundSystem soundSystem;
     Router router;
     Lights lights;
-    VideoGame game;
+    VideoGame movie;
 
-    public VideoGameFacade(TV tv,
-                           GameConsole console,
-                           GameController controller,
-                           SoundSystem soundSystem,
-                           Router router,
-                           Lights lights){
+    public MovieFacade(TV tv,
+                       GameConsole console,
+                       GameController controller,
+                       SoundSystem soundSystem,
+                       Lights lights){
         this.tv = tv;
         this.console = console;
         this.controller = controller;
         this.soundSystem = soundSystem;
-        this.router = router;
         this.lights = lights;
     }
 
 
-    public void playOnlineGame(String gameName){
+    public void playMovie(String MovieName){
 
         System.out.println("Turning the system ON, this may take some time");
         System.out.println();
@@ -45,25 +43,22 @@ public class VideoGameFacade {
 
         console.on();
         controller.on();
-        game = new PS3Game(gameName);
-        console.insertGame(game);
+        movie = new PS3Game(MovieName);
+        console.insertGame(movie);
 
         soundSystem.on();
         soundSystem.toOpticalEntry();
 
-        router.on();
-        router.checkInternet();
 
         lights.off();
 
-        game.setOnlineMode();
-        game.play();
+        movie.play();
         System.out.println();
 
 
     }
 
-    public void stopPlayingGame(){
+    public void stopPlayingMovie(){
 
         System.out.println();
         System.out.println("Turning the system OFF, this may take some time");
@@ -73,7 +68,6 @@ public class VideoGameFacade {
         controller.off();
         console.off();
         soundSystem.off();
-        router.off();
 
 
     }

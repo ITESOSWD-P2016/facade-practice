@@ -28,7 +28,7 @@ public class Driver {
 
         videoGameFacade.stopPlayingGame();
 
-         videoGameFacade = new VideoGameFacade(tv, xbox,dualShock,bose,linksys,lights);
+        videoGameFacade = new VideoGameFacade(tv, xbox,dualShock,bose,linksys,lights);
 
         videoGameFacade.playOnlineGame("Gears Of Wars");
 
