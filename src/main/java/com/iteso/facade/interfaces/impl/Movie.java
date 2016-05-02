@@ -2,30 +2,21 @@ package com.iteso.facade.interfaces.impl;
 
 import com.iteso.facade.interfaces.VideoGame;
 
-/**
- * Created with IntelliJ IDEA.
- * User: rvillalobos
- * Date: 11/14/13
- * Time: 11:05 PM
- * To change this template use File | Settings | File Templates.
- */
-public class PS3Game implements VideoGame {
+public class Movie implements VideoGame {
     String name;
-    public PS3Game(String name){
+    
+    public Movie(String name){
         this.name = name;
     }
 
-    
     public void setOnlineMode() {
-        System.out.println("Setting Online mode on " + name);
+        System.out.println("I don't know if it's possible but we are setting Online mode on " + name);
     }
 
-    
     public void play() {
         System.out.println("Playing " + name);
     }
 
-    
     public String getName() {
         return this.name;
     }

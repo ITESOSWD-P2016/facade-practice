@@ -21,8 +21,23 @@ public class Driver {
         Router linksys = new Linksys();
         SoundSystem bose = new Bose();
         TV tv = new SonyBravia();
+        VideoGame movie = new Movie("Titanic");
+        
+        MovieFacade movieFacade = new MovieFacade(tv, xbox, dualShock, bose, linksys, lights);
+        
+        movieFacade.playMovie(movie.getName());
+        
+        //movieFacade.stopPlayingGame();
+        
+        System.out.println(((SonyBravia) movieFacade.tv).isEstatus());
+        System.out.println(((XBOX) movieFacade.console).isEstatus());
+        System.out.println(((DualShock) movieFacade.controller).isEstatus());
+        System.out.println(((EcoLights) movieFacade.lights).isEstatus());
+        System.out.println(((Linksys) movieFacade.router).isEstatus());
+        System.out.println(((Bose) movieFacade.soundSystem).isEstatus());
+        System.out.println(movieFacade.movie.getName());
 
-        VideoGameFacade videoGameFacade = new VideoGameFacade(tv, ps3,dualShock,bose,linksys,lights);
+        /*VideoGameFacade videoGameFacade = new VideoGameFacade(tv, ps3,dualShock,bose,linksys,lights);
 
         videoGameFacade.playOnlineGame("Fifa 14");
 
@@ -30,7 +45,9 @@ public class Driver {
 
          videoGameFacade = new VideoGameFacade(tv, xbox,dualShock,bose,linksys,lights);
 
-        videoGameFacade.playOnlineGame("Gears Of Wars");
+        videoGameFacade.playOnlineGame("Gears Of Wars");*/
+        
+        
 
     }
 

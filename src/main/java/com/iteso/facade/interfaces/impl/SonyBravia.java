@@ -10,17 +10,25 @@ import com.iteso.facade.interfaces.TV;
  * To change this template use File | Settings | File Templates.
  */
 public class SonyBravia implements TV {
-    @Override
-    public void on() {
+    // Para realizar pruebas se crea este atributo y el método correspondiente
+	private boolean estatus;
+	
+    public boolean isEstatus() {
+		return estatus;
+	}
+
+	public void on() {
         System.out.println("Sony Bravia is ON");
+        this.estatus = true;
     }
 
-    @Override
+    
     public void off() {
         System.out.println("Sony Bravia is OFF");
+        this.estatus = false;
     }
 
-    @Override
+    
     public void toHDMI() {
         System.out.println("Changing Sony Bravia input to HDMI");
     }

@@ -10,17 +10,23 @@ import com.iteso.facade.interfaces.Router;
  * To change this template use File | Settings | File Templates.
  */
 public class Linksys implements Router {
-    @Override
+    // Para realizar pruebas se crea este atributo y el método correspondiente
+	private boolean estatus;
+	
+    public boolean isEstatus() {
+		return estatus;
+	}
+
     public void on() {
         System.out.println("Linksys router is ON");
+        this.estatus = true;
     }
 
-    @Override
     public void off() {
         System.out.println("Linksys router is OFF");
+        this.estatus = false;
     }
 
-    @Override
     public void checkInternet() {
         System.out.println("Checking internet connection");
         System.out.println("Internet connection is OK");
