@@ -11,4 +11,5 @@ public interface TV {
     void on();
     void off();
     void toHDMI();
+    String getStatus();
 }

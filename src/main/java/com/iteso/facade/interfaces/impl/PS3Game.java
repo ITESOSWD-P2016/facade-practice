@@ -10,7 +10,7 @@ import com.iteso.facade.interfaces.VideoGame;
  * To change this template use File | Settings | File Templates.
  */
 public class PS3Game implements VideoGame {
-    String name;
+   public String name;
     public PS3Game(String name){
         this.name = name;
     }
