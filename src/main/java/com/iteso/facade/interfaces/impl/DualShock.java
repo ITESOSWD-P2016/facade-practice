@@ -10,13 +10,21 @@ import com.iteso.facade.interfaces.GameController;
  * To change this template use File | Settings | File Templates.
  */
 public class DualShock implements GameController {
-    @Override
-    public void on() {
-        System.out.println("DualShock wireless controller is ON");
+
+    private String status;
+
+    public String getStatus(){
+        return status;
     }
 
-    @Override
+    public void on() {
+        System.out.println("DualShock wireless controller is ON");
+        status="DualShock wireless controller is ON";
+    }
+
+
     public void off() {
         System.out.println("DualShock wireless controller is OFF");
+        status="DualShock wireless controller is OFF";
     }
 }

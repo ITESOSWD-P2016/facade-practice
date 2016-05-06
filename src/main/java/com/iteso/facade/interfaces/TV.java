@@ -8,6 +8,7 @@ package com.iteso.facade.interfaces;
  * To change this template use File | Settings | File Templates.
  */
 public interface TV {
+    String getStatus();
     void on();
     void off();
     void toHDMI();

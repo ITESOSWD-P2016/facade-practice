@@ -11,17 +11,25 @@ import com.iteso.facade.interfaces.VideoGame;
  * To change this template use File | Settings | File Templates.
  */
 public class XBOX implements GameConsole {
-    @Override
+
+    private String status;
+
+    public String getStatus() {
+        return status;
+    }
+
     public void on() {
         System.out.println("XBOX 360 is ON");
+        status="XBOX 360 is ON";
     }
 
-    @Override
+
     public void off() {
         System.out.println("XBOX 360 is OFF");
+        status="XBOX 360 is OFF";
     }
 
-    @Override
+
     public void insertGame(VideoGame videoGame) {
         System.out.println(videoGame.getName() + " has been inserted into Play Station 3");
     }
